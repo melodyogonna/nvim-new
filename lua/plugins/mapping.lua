@@ -22,7 +22,7 @@ return {
           ["<C-b>"] = { "<cmd>Neotree toggle<cr>", desc = "Toggle Explorer" },
           ["<leader>o"] = { "<cmd>Neotree focus<cr>", desc = "Focus Explorer" },
           ["<leader>x"] = { "<cmd>close<cr>", desc = "Close buffer" },
-          ["<leader>cr"] = { "<cmd>RustRunnables<cr>", desc = "Rust runnables" },
+          ["<leader>gg"] = { "<cmd>Neogit<cr>", desc = "Neogit Main Page" },
           -- quick save
           -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
           ["qn"] = { "<cmd>cn<cr>", desc = "Quickfix next" },

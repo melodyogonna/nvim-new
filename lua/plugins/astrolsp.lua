@@ -38,24 +38,21 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      -- "pyright"
+      "sourcekit",
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
-      denols = function(opts)
-        opts.root_dir = require("lspconfig.util").root_pattern("deno.json", "deno.jsonc")
-        return opts
-      end,
-      tsserver = function(opts)
-        opts.root_dir = require("lspconfig.util").root_pattern "package.json"
-        return opts
-      end,
-      sourcekit = function(opts)
-        opts.filetypes = { "swift" }
-        return opts
-      end,
+      denols = {
+        root_dir = require("lspconfig.util").root_pattern("deno.json", "deno.jsonc"),
+      },
+      tsserver = {
+        root_dir = require("lspconfig.util").root_pattern "package.json",
+      },
+      sourcekit = {
+        filetypes = { "swift" },
+      },
     },
     -- customize how language servers are attached
     handlers = {
