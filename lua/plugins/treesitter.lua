@@ -8,7 +8,7 @@ return {
   dependencies = {
     "nvim-treesitter/nvim-treesitter-textobjects",
   },
-  opts = {
+  config = {
     ensure_installed = {
       "javascript",
       "typescript",
@@ -30,10 +30,11 @@ return {
         lookahead = true,
         keymaps = {
           -- You can use the capture groups defined in textobjects.scm
-          ["af"] = "@function.outer",
-          ["if"] = "@function.inner",
+          ["af"] = { query = "@function.outer", desc = "Around function" },
 
-          ["ac"] = "@class.outer",
+          ["if"] = { query = "@function.inner", desc = "Innner function" },
+
+          ["ac"] = { query = "@class.outer", desc = "Around class" },
           ["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
 
           -- Inner if - For conditionals
@@ -54,6 +55,7 @@ return {
         selection_modes = {
           ["@parameter.outer"] = "v", -- charwise
           ["@function.outer"] = "V", -- linewise
+          ["@function.inner"] = "<c-v>", -- blockwise
           ["@class.outer"] = "<c-v>", -- blockwise
         },
 
