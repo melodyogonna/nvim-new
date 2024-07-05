@@ -30,6 +30,7 @@ return {
     "tpope/vim-dispatch",
     event = "VeryLazy",
   },
+  { "jamestthompson3/nvim-remote-containers" },
 
   { "rcarriga/nvim-notify", enabled = false },
   { "Shatur/neovim-session-manager", enabled = false },
