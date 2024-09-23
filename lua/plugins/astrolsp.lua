@@ -39,6 +39,7 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       "sourcekit",
+      "mojo",
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
@@ -62,7 +63,6 @@ return {
       -- the key is the server that is being setup with `lspconfig`
       -- rust_analyzer = false, -- setting a handler to false will disable the set up of that language server
       -- pyright = function(_, opts) require("lspconfig").pyright.setup(opts) end -- or a custom handler function can be passed
-      rust_analyzer = function(_, opts) require("rust-tools").setup { server = opts } end,
     },
     -- Configure buffer local auto commands to add when attaching a language server
     autocmds = {
@@ -105,7 +105,7 @@ return {
       },
     },
     -- A custom `on_attach` function to be run after the default `on_attach` function
-    -- takes two parameters `client` and `bufnr`  (`:h lspconfig-setup`)
+    -- takes two parameters `client` and `bufnr` (`:h lspconfig-setup`)
     on_attach = function(client, bufnr)
       -- this would disable semanticTokensProvider for all clients
       -- client.server_capabilities.semanticTokensProvider = nil

@@ -8,7 +8,7 @@ return {
           -- second key is the lefthand side of the map
           -- mappings seen under group name "Buffer"
           -- Vim test
-          ["<leader>tn"] = { "<cmd>Neotest run<cr>", desc = "Test nearest" },
+          ["<leader>tt"] = { "<cmd>Neotest run<cr>", desc = "Test nearest" },
           ["<leader>tb"] = { "<cmd>Neotest run file<cr>", desc = "Test Buffer" },
           ["<leader>ts"] = { function() require("neotest").run.run { suite = true } end, desc = "Test suite" },
           ["<leader>tl"] = { "<cmd>Neotest run last<cr>", desc = "Test last" },
@@ -20,7 +20,15 @@ return {
           ["<leader>ta"] = { "<cmd>Neotest attach<cr>", desc = "Test attach" },
 
           ["<C-b>"] = { "<cmd>Neotree toggle<cr>", desc = "Toggle Explorer" },
-          ["<leader>o"] = { "<cmd>Neotree focus<cr>", desc = "Focus Explorer" },
+
+          -- Obsidian
+          ["<leader>o"] = { "<cmd>ObsidianWorkspace<cr>", desc = "Obsidian Workspace" },
+          ["<leader>oo"] = { "<cmd>ObsidianQuickSwitch<cr>", desc = "Obsidian Open" },
+          ["<leader>oi"] = { "<cmd>ObsidianTemplate<cr>", desc = "Obsidian Insert template" },
+          ["<leader>of"] = { "<cmd>ObsidianSearch<cr>", desc = "Obsidian Search" },
+          ["<leader>od"] = { "<cmd>ObsidianToday<cr>", desc = "Obsidian Daily" },
+          ["<leader>on"] = { "<cmd>ObsidianNew<cr>", desc = "Obsidian New" },
+
           ["<leader>gg"] = { "<cmd>Neogit<cr>", desc = "Neogit Main Page" },
           -- quick save
           -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command

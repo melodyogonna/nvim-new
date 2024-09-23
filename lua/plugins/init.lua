@@ -4,18 +4,10 @@ return {
   -- vim test
   { "vim-test/vim-test", event = "VeryLazy" },
   -- Fox themes
-  { "EdenEast/nightfox.nvim", event = "User AstroFile" },
-  { "folke/tokyonight.nvim", event = "User AstroFile" },
   { "rebelot/kanagawa.nvim", event = "User AstroFile" },
 
   { "tpope/vim-fugitive", cmd = "G" },
-  { "simrat39/rust-tools.nvim", ft = "rust" },
-  {
-    "williamboman/mason-lspconfig.nvim",
-    opts = {
-      ensure_installed = { "rust_analyzer" },
-    },
-  },
+
   {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -23,15 +15,23 @@ return {
     config = function() require("nvim-surround").setup {} end,
   },
   {
-    "amadeus/vim-mjml",
-    ft = "mjml",
-  },
-  {
     "tpope/vim-dispatch",
     event = "VeryLazy",
   },
-  { "jamestthompson3/nvim-remote-containers" },
 
+  { "numToStr/Comment.nvim", enabled = false },
+  { "stevearc/dressing.nvim", enabled = false },
+  { "stevearc/aerial.nvim", enabled = false },
   { "rcarriga/nvim-notify", enabled = false },
+  { "folke/neoconf.nvim", enabled = false },
+  { "onsails/lspkind.nvim", enabled = false },
   { "Shatur/neovim-session-manager", enabled = false },
+  { "NvChad/nvim-colorizer.lua", enabled = false },
+  { "RRethy/vim-illuminate", enabled = false },
+  { "kevinhwang91/nvim-ufo", enabled = false },
+  { "s1n7ax/nvim-window-picker", enabled = false },
+  { "stevearc/resession.nvim", enabled = false },
+  { "NMAC427/guess-indent.nvim", enabled = false },
+  { "mrjones2014/smart-splits.nvim", enabled = false },
+  { "echasnovski/mini.bufremove", enabled = false },
 }

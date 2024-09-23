@@ -33,6 +33,7 @@ return {
         swapfile = false,
         undodir = os.getenv "HOME" .. "/.nvim/undodir/",
         showtabline = 0,
+        conceallevel = 2,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
