@@ -19,7 +19,7 @@ return {
           },
           ["<leader>ta"] = { "<cmd>Neotest attach<cr>", desc = "Test attach" },
 
-          ["<C-b>"] = { "<cmd>Neotree toggle<cr>", desc = "Toggle Explorer" },
+          ["<C-b>"] = { "<cmd>Ex<cr>", desc = "Toggle Explorer" },
 
           -- Obsidian
           ["<leader>o"] = { "<cmd>ObsidianWorkspace<cr>", desc = "Obsidian Workspace" },
