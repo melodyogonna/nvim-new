@@ -14,7 +14,7 @@ return {
           ["<leader>tl"] = { "<cmd>Neotest run last<cr>", desc = "Test last" },
           ["<leader>to"] = { "<cmd>Neotest output<cr>", desc = "Test output" },
           ["<leader>td"] = {
-            function() require("neotest").run.run { strategy = "dab", suite = false } end,
+            function() require("neotest").run.run { strategy = "dap", suite = false } end,
             desc = "Test Nearest with debug",
           },
           ["<leader>ta"] = { "<cmd>Neotest attach<cr>", desc = "Test attach" },

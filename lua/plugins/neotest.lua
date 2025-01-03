@@ -9,8 +9,10 @@ return {
     "haydenmeade/neotest-jest",
     "nvim-neotest/neotest-python",
     "fredrikaverpil/neotest-golang",
-    "lawrence-laz/neotest-zig",
-    "nvim-neotest/neotest-vim-test",
+    {
+      "nvim-neotest/neotest-vim-test",
+      dependencies = { "vim-test/vim-test" },
+    },
   },
   config = function()
     require("neotest").setup {
@@ -18,7 +20,6 @@ return {
         require "neotest-python",
         require "neotest-jest",
         require "neotest-golang",
-        require "neotest-zig",
         require "neotest-vim-test" { ignore_filetypes = { "python", "javascript", "go", "typescript" } },
       },
     }
