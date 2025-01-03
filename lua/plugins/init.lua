@@ -18,17 +18,25 @@ return {
     "tpope/vim-dispatch",
     event = "VeryLazy",
   },
+  {
+    "stevearc/oil.nvim",
+    ---@module 'oil'
+    ---@type oil.SetupOpts
+    opts = {
+      skip_confirm_for_simple_edits = true,
+    },
+    -- Optional dependencies
+    dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
+  },
 
   { "numToStr/Comment.nvim", enabled = false },
   { "stevearc/dressing.nvim", enabled = false },
   { "stevearc/aerial.nvim", enabled = false },
   { "rcarriga/nvim-notify", enabled = false },
   { "folke/neoconf.nvim", enabled = false },
-  { "onsails/lspkind.nvim", enabled = false },
   { "Shatur/neovim-session-manager", enabled = false },
   { "NvChad/nvim-colorizer.lua", enabled = false },
   { "RRethy/vim-illuminate", enabled = false },
-  { "kevinhwang91/nvim-ufo", enabled = false },
   { "s1n7ax/nvim-window-picker", enabled = false },
   { "stevearc/resession.nvim", enabled = false },
   { "NMAC427/guess-indent.nvim", enabled = false },

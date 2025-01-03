@@ -8,7 +8,7 @@ return {
     "antoinemadec/FixCursorHold.nvim",
     "haydenmeade/neotest-jest",
     "nvim-neotest/neotest-python",
-    "nvim-neotest/neotest-go",
+    "fredrikaverpil/neotest-golang",
     "lawrence-laz/neotest-zig",
     "nvim-neotest/neotest-vim-test",
   },
@@ -17,7 +17,7 @@ return {
       adapters = {
         require "neotest-python",
         require "neotest-jest",
-        require "neotest-go",
+        require "neotest-golang",
         require "neotest-zig",
         require "neotest-vim-test" { ignore_filetypes = { "python", "javascript", "go", "typescript" } },
       },

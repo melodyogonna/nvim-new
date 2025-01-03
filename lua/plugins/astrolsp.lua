@@ -12,7 +12,7 @@ return {
     features = {
       autoformat = true, -- enable or disable auto formatting on start
       codelens = true, -- enable/disable codelens refresh on start
-      inlay_hints = true, -- enable/disable inlay hints on start
+      inlay_hints = false, -- enable/disable inlay hints on start
       semantic_tokens = true, -- enable/disable semantic token highlighting
     },
     -- customize lsp formatting options
@@ -38,8 +38,8 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      "sourcekit",
       "mojo",
+      "sourcekit",
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
@@ -50,9 +50,6 @@ return {
       },
       tsserver = {
         root_dir = require("lspconfig.util").root_pattern "package.json",
-      },
-      sourcekit = {
-        filetypes = { "swift" },
       },
     },
     -- customize how language servers are attached

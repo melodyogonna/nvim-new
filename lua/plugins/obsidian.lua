@@ -50,6 +50,8 @@ return {
       folder = "Journals",
     },
 
+    disable_frontmatter = true,
+
     note_frontmatter_func = function(note)
       -- This is equivalent to the default frontmatter function.
       local out = { id = note.id, aliases = note.aliases, tags = note.tags }

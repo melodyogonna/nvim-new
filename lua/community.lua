@@ -9,6 +9,7 @@ return {
   { import = "astrocommunity.git.neogit" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.python-ruff" },
+  { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   -- import/override with your plugins folder
