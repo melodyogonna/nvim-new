@@ -42,6 +42,10 @@ return {
 
           -- telescope
           ["<leader>ft"] = { "<cmd>TodoTelescope<cr>", desc = "Open telescope todo" },
+
+          --AI Mappings
+          ["<leader>ai"] = { "<cmd>CodeCompanionChat toggle<cr>", desc = "Open Codecompanion Chat buffer" },
+          ["<leader>cp"] = { "<cmd>CodeCompanion<cr>", desc = "Open Codecompanion Chat promt" },
         },
         t = {
           -- setting a mapping to false will disable it
@@ -53,6 +57,7 @@ return {
             function() require("telescope.builtin").grep_string() end,
             desc = "Search selection under cursor",
           },
+          ["<leader>ai"] = { "<cmd>CodeCompanionChat Add<cr>", desc = "Add selection to buffer" },
         },
       },
     },
