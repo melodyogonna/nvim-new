@@ -15,13 +15,10 @@ return {
       "html",
       "htmldjango",
       "css",
-      "scss",
       "vue",
       "json",
       "go",
       "rust",
-      "zig",
-      "swift",
     },
     textobjects = {
       select = {
@@ -126,7 +123,7 @@ return {
       },
     },
     incremental_selection = {
-      enable = true,
+      enable = false,
       keymaps = {
         init_selection = "<leader>s", -- set to `false` to disable one of the mappings
         scope_incremental = "<CR>",

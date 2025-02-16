@@ -15,6 +15,18 @@ return {
             },
           },
         },
+        slash_commands = {
+          ["buffer"] = {
+            opts = {
+              provider = "telescope", -- default|telescope|mini_pick|fzf_lua
+            },
+          },
+          ["file"] = {
+            opts = {
+              provider = "telescope", -- default|telescope|mini_pick|fzf_lua
+            },
+          },
+        },
       },
       inline = {
         adapter = "gemini",

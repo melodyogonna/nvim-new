@@ -6,8 +6,6 @@ return {
   -- Fox themes
   { "rebelot/kanagawa.nvim", event = "User AstroFile" },
 
-  { "tpope/vim-fugitive", cmd = "G" },
-
   {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -28,6 +26,7 @@ return {
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
   },
+  { "sindrets/diffview.nvim", event = "VeryLazy" },
 
   { "numToStr/Comment.nvim", enabled = false },
   { "stevearc/dressing.nvim", enabled = false },
@@ -42,4 +41,5 @@ return {
   { "NMAC427/guess-indent.nvim", enabled = false },
   { "mrjones2014/smart-splits.nvim", enabled = false },
   { "echasnovski/mini.bufremove", enabled = false },
+  { "tpope/vim-fugitive", cmd = "G", enabled = false },
 }
