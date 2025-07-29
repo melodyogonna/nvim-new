@@ -26,6 +26,11 @@ return {
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
   },
+  {
+    "davidmh/mdx.nvim",
+    config = true,
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+  },
   { "sindrets/diffview.nvim", event = "VeryLazy" },
 
   { "numToStr/Comment.nvim", enabled = false },

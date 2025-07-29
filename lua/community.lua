@@ -8,8 +8,8 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.python-ruff" },
-  { import = "astrocommunity.pack.vue" },
-  { import = "astrocommunity.pack.html-css" },
+  { import = "astrocommunity.pack.vue", enabled = false },
+  { import = "astrocommunity.pack.html-css", enabled = false },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   -- import/override with your plugins folder
 }

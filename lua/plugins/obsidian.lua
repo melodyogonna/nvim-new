@@ -1,5 +1,5 @@
 return {
-  "epwalsh/obsidian.nvim",
+  "obsidian-nvim/obsidian.nvim",
   -- the obsidian vault in this default config  ~/obsidian-vault
   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand':
   -- event = { "bufreadpre " .. vim.fn.expand "~" .. "/my-vault/**.md" },
@@ -30,7 +30,7 @@ return {
     },
   },
   opts = {
-    notes_subdir = "Notes",
+    notes_subdir = "Thoughts",
     new_notes_location = "notes_subdir",
     finder = "telescope.nvim",
     workspaces = {
@@ -50,7 +50,22 @@ return {
       folder = "Journals",
     },
 
-    disable_frontmatter = true,
+    attachments = {
+      img_folder = "Media",
+      img_name_func = function() return string.format("Pasted image %s", os.date "%Y%m%d%H%M%S") end,
+    },
+
+    note_id_func = function(title)
+      -- To match my Obsidian config, if no title is given at all then create a new note that simulates
+      -- my random note settings, otherwise, do default Zettelkasten stuff.
+      -- If I give a fully qualified name "including with .md" then that will be used
+      if title == nil then return tostring(os.date "%Y-%M-%d-%H%M(%S)") end
+      local suffix = ""
+      -- If title is given, transform it into valid file name.
+      suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
+
+      return tostring(os.time()) .. "-" .. suffix
+    end,
 
     note_frontmatter_func = function(note)
       -- This is equivalent to the default frontmatter function.

@@ -22,18 +22,17 @@ return {
           ["<C-b>"] = { "<cmd>Oil<cr>", desc = "Toggle Explorer" },
 
           -- Obsidian
-          ["<leader>o"] = { "<cmd>ObsidianWorkspace<cr>", desc = "Obsidian Workspace" },
+          ["<leader>ow"] = { "<cmd>ObsidianWorkspace<cr>", desc = "Obsidian Workspace" },
           ["<leader>oo"] = { "<cmd>ObsidianQuickSwitch<cr>", desc = "Obsidian Open" },
-          ["<leader>oi"] = { "<cmd>ObsidianTemplate<cr>", desc = "Obsidian Insert template" },
+          ["<leader>oi"] = { "<cmd>Obsidian template<cr>", desc = "Obsidian Insert template" },
           ["<leader>of"] = { "<cmd>ObsidianSearch<cr>", desc = "Obsidian Search" },
           ["<leader>od"] = { "<cmd>ObsidianToday<cr>", desc = "Obsidian Daily" },
+          ["<leader>ofd"] = { "<cmd>Obsidian dailies<cr>", desc = "Obsidian find dailies" },
           ["<leader>on"] = { "<cmd>ObsidianNew<cr>", desc = "Obsidian New" },
 
           ["<leader>gg"] = { "<cmd>Neogit<cr>", desc = "Neogit Main Page" },
           -- quick save
           -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-          ["qn"] = { "<cmd>cn<cr>", desc = "Quickfix next" },
-          ["qp"] = { "<cmd>cp<cr>", desc = "Quickfix previous" },
           ["<leader>co"] = { "<cmd>copen<cr>", desc = "Open quickfix list" },
           ["<leader>ct"] = { "<cmd>TodoQuickFix<cr>", desc = "Open quickfix list todo" },
           -- Todo comments

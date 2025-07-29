@@ -16,6 +16,7 @@ return {
       "htmldjango",
       "css",
       "vue",
+      "python",
       "json",
       "go",
       "rust",
@@ -123,9 +124,9 @@ return {
       },
     },
     incremental_selection = {
-      enable = false,
+      enable = true,
       keymaps = {
-        init_selection = "<leader>s", -- set to `false` to disable one of the mappings
+        init_selection = "<leader><Space>", -- set to `false` to disable one of the mappings
         scope_incremental = "<CR>",
         node_incremental = "<TAB>",
         node_decremental = "<S-TAB>",
