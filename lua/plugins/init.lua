@@ -46,5 +46,4 @@ return {
   { "NMAC427/guess-indent.nvim", enabled = false },
   { "mrjones2014/smart-splits.nvim", enabled = false },
   { "echasnovski/mini.bufremove", enabled = false },
-  { "tpope/vim-fugitive", cmd = "G", enabled = false },
 }
