@@ -7,9 +7,11 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.go" },
-  { import = "astrocommunity.pack.python-ruff" },
-  { import = "astrocommunity.pack.vue", enabled = false },
-  { import = "astrocommunity.pack.html-css", enabled = false },
+  { import = "astrocommunity.pack.rust" },
+  -- Base pack with basedpyright and ruff
+  { import = "astrocommunity.pack.python.base" },
+  { import = "astrocommunity.pack.python.basedpyright" },
+  { import = "astrocommunity.pack.python.ruff" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   -- import/override with your plugins folder
 }

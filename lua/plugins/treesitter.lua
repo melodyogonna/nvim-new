@@ -1,14 +1,19 @@
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+
 -- Customize Treesitter
+-- --------------------
+-- Treesitter customizations are handled with AstroCore
+-- as nvim-treesitter simply provides a download utility for parsers
 
 ---@type LazySpec
-
 return {
-  "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate",
-  dependencies = {
-    "nvim-treesitter/nvim-treesitter-textobjects",
-  },
-  config = {
+  "AstroNvim/astrocore",
+  ---@type AstroCoreOpts
+  opts = {
+    treesitter = {
+      highlight = true, -- enable/disable treesitter based highlighting
+      indent = true, -- enable/disable treesitter based indentation
+      auto_install = true, -- enable/disable automatic installation of detected languages
     ensure_installed = {
       "javascript",
       "typescript",
@@ -20,8 +25,8 @@ return {
       "json",
       "go",
       "rust",
-    },
-    textobjects = {
+    },-- add more arguments for adding more treesitter parsers
+      text_objects = {
       select = {
         enable = true,
         -- Automatically jump forward to textobj, similar to targets.vim
@@ -122,21 +127,7 @@ return {
           },
         },
       },
-    },
-    incremental_selection = {
-      enable = true,
-      keymaps = {
-        init_selection = "<leader><Space>", -- set to `false` to disable one of the mappings
-        scope_incremental = "<CR>",
-        node_incremental = "<TAB>",
-        node_decremental = "<S-TAB>",
-      },
-    },
-    indent = {
-      enable = true,
-    },
-    highlight = {
-      enable = true,
+    }
     },
   },
 }
