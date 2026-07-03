@@ -30,6 +30,9 @@ return {
           ["<leader>ofd"] = { "<cmd>Obsidian dailies<cr>", desc = "Obsidian find dailies" },
           ["<leader>on"] = { "<cmd>ObsidianNew<cr>", desc = "Obsidian New" },
 
+          -- Pi
+          ["<leader>pp"] = { "<cmd>35vs | te pi<cr>", desc = "New Pi" },
+
           ["<leader>gg"] = { "<cmd>Neogit<cr>", desc = "Neogit Main Page" },
           -- quick save
           -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
